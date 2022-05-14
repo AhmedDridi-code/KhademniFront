@@ -1,0 +1,232 @@
+
+.main{
+    background: url(src/assets/image/accei.png) no-repeat;
+     background-size: cover;
+     width:100%;
+     height:107vh;
+ }
+ .main h1{
+    color: #CAE6F1;
+    text-align: center;
+    margin: 5px;
+    font-size:3.3rem;
+    font-weight:1080;
+    line-height: 1.3;
+    font-family: 'lobster', Cursive ;
+} 
+
+ 
+
+ .main4 h2 {
+     text-align: center;
+     font-size : 3rem;
+     color: #30709C;
+     font-family: 'lobster', Cursive ;
+     line-height: 1.9;}
+
+     
+     .main4 .card {
+         margin-left: 100px;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         min-width: 0;
+         word-wrap: break-word;
+         background-color: transparent;
+         background-clip: border-box;
+         border: 1px solid transparent;
+         border-radius: .25rem;
+     }
+   
+     
+
+     .next1{
+         background: url(src/assets/image/2.PNG) no-repeat;
+         background-size: cover;
+         width:100%;
+         height:38vh;
+     }
+     
+    
+
+     .btn7 :hover{ text-decoration: underline; }
+     .btn7{
+       color: #CAE6F1;
+       background:#30709C;
+       font-size: 1.1rem;
+       font-weight: 100;
+       
+       font-family: 'lobster', Cursive ;
+       letter-spacing: 1px;
+       width: 210px;
+       padding: 8px 15px 9px;
+       border-radius: 10px;
+       transition: all 0.3s ease 0s;
+       margin-left: 30px;
+     }
+     .main1{
+        background: url(src/assets/image/acc1.PNG) no-repeat;
+         background-size: cover;
+         width:100%;
+         height:90vh;
+     }
+     .main1 h1{
+         color: #30709C;
+         text-align: center;
+         margin: 5px;
+         margin-left: 215px;
+         font-size:2.4rem;
+         font-weight:1080;
+         line-height: 1.5;
+         font-family: 'lobster', Cursive ;
+     } 
+     .main1 p{
+        color: rgb(63, 62, 62);
+        text-align: center;
+        margin: 15px;
+        margin-left: 215px;
+        font-size:1.2rem;
+        font-weight:1080;
+        line-height: 1.2;
+        font-family: 'Roboto', sans-serif;
+     }
+    
+  
+  
+      .btn1 :hover{ text-decoration: underline; }
+      .btn1{
+        color: #CAE6F1;
+        background:  #30709C;
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family: 'lobster', Cursive ;
+        letter-spacing: 1px;
+        width: 160px;
+        padding: 8px 15px 9px;
+        border-radius: 10px;
+        transition: all 0.3s ease 0s;
+        margin-left: 40px;
+      }
+
+      .btn2 :hover{ text-decoration: underline; }
+      .btn2{
+        color: #CAE6F1;
+        background: #30709C;
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family: 'lobster', Cursive ;
+        letter-spacing: 1px;
+        width: 160px;
+        padding: 8px 15px 9px;
+        border-radius: 10px;
+        transition: all 0.3s ease 0s;
+        margin-left: 40px;
+      }
+    
+ .main2{
+     background: url(src/assets/image/acce2.PNG) no-repeat;
+      background-size: cover;
+      width:100%;
+      height:80vh;
+  }
+  .main2 h1{
+     text-align: center;
+    
+     font-size : 3rem;
+     color: #30709C;
+     font-family: 'lobster', Cursive ;
+     line-height: 1.9;}
+     .main2 p{
+       
+         color: rgb(12, 12, 12);
+         text-align: center;
+    
+         margin-right: 10px;
+         font-size:1.4rem;
+         font-weight:1080;
+         line-height: 1.2;
+         font-family: 'Roboto', sans-serif;
+      }
+      
+         .next3 h1 {
+             text-align: center;
+             font-size : 3rem;
+             font-weight:1080;
+             color: #30709C;
+             font-family: 'lobster', Cursive ;
+             line-height: 1.2;}
+            .next3 h2{
+             color:  #83bbce;
+             text-align: center;
+             font-size:1.8rem;
+             font-weight:1080;
+             line-height: 1.2;
+             font-family: 'lobster', Cursive ;
+ 
+            }
+            .next3 h5{
+             color: rgb(99, 97, 97);
+             text-align: center;
+             font-size:1.4rem;
+             font-weight:1080;
+             line-height: 1.2;
+             font-family: 'Roboto', sans-serif;
+ 
+            }
+ 
+            .next3 a{
+             color: rgb(161, 159, 159);
+             text-align: center;
+             font-size:1.4rem;
+             font-weight:1080;
+             line-height: 0.8;
+             font-family:'Roboto', sans-serif;}
+       .next3 .card{
+           
+         margin-left: 40px;
+         background-color:rgb(250, 250, 250);
+         border: 1px solid transparent;
+       
+        }
+     .contact{
+         margin-right: 30px;
+         background-color: rgb(238, 236, 235);
+         background-size: cover;
+         width:100%;
+         height:55vh;
+     }
+     .contact h1{
+        text-align:center;
+        margin-right: 10px;
+        font-size : 1.3rem;
+        color: #30709C;
+        
+        font-family: 'lobster', Cursive ;
+        line-height: 1.2;}
+    
+        .contact p{
+            text-align:center;
+        
+            margin-left: 50px;
+            font-size : 1.3rem;
+            color: #30709C;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.2;}
+           
+           
+             .contact h2{
+                text-align:center;
+                font-size : 1.5rem;
+                color: #30709C;
+                font-family: 'lobster', Cursive ;
+                line-height: 1.4;
+             }
+             
+.fa , .fab {
+    color:#30709C;
+    font-size : 1.4rem ; 
+    cursor: pointer;
+    margin-right: 15px;
+
+}
+

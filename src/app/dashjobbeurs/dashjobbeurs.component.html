@@ -1,0 +1,154 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="main1" id="sidebar-wrapper">
+        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold  border-bottom" (click)="dashboard()"_>
+            <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</div> <br>
+                <div class="list-group list-group-flush my-3">
+                    
+                    <a  class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashservices()">
+                        <i class="fa fa-pie-chart" aria-hidden="true" ></i> Services</a> <br><br>
+                   
+                    <a  class="list-group-item list-group-item-action second-text fw-bold" (click)="dashjobbeurs()">
+                        <i class="fa fa-users" aria-hidden="true" ></i> Jobbeurs</a> <br> <br>
+                    <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashclients()">
+                        <i class="fa fa-users" aria-hidden="true" ></i> Clients</a> <br> <br>
+                    <a  class="list-group-item list-group-item-action  second-text fw-bold"  (click)="dashcontact()">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> Contact</a> <br> <br>
+                  
+                    <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="logout()">
+                        <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</a>
+                </div>
+            </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+            <div class="d-flex align-items-center">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <h2 class="fs-2 m-0"> Jobbeurs</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+           
+        </nav>
+
+    <br>
+
+            <div class="container-fluid px-4">
+                <div class="main">
+  
+            <div class="col">
+                <table class="table  rounded1 shadow-sm  table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Télephone</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        <tr>
+                           <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Majdi</td>
+                            <td>majdi1@gmail.com </td>
+                            <td>51111222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Jouri</td>
+                            <td>jouri1@gmail.com </td>
+                            <td>51222222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Jad</td>
+                            <td>jad1@gmail.com </td>
+                            <td>51333222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Iyed</td>
+                            <td>iyed1@gmail.com </td>
+                            <td>51444222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Lyna</td>
+                            <td>lyna1@gmail.com </td>
+                            <td>51555222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Aymen</td>
+                            <td>aymen1@gmail.com </td>
+                            <td>51666222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Ayla</td>
+                            <td>ayla1@gmail.com </td>
+                            <td>51777222</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Majd</td>
+                            <td>majd1@gmail.com </td>
+                            <td>51222888</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Lyne</td>
+                            <td>lyne1@gmail.com </td>
+                            <td>51222999</td>
+                            <td>Jobbeur</td>
+                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                            <td> <button  class="btn"> Suspendre </button></td>
+                        </tr>
+                       
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </div>
+
+<!-- /#page-content-wrapper -->

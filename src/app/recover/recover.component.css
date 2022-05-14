@@ -1,0 +1,131 @@
+
+
+
+
+
+.form-container{
+    background-color: rgb(241, 237, 237);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px -15px rgba(0, 0, 0, 0.3);
+    height: 440px;
+    width: 600px;
+    margin-left: 345px;
+}
+.form-container p{
+    color:  #83bbce;
+    font-size : 1rem;
+    font-weight: 600;
+    margin: 0 0 25px;
+  text-align: center;
+    line-height: 1.9;  
+}
+.form-container .title{
+    color: #30709C;
+    font-size : 2rem;
+    font-weight: 600;
+    margin: 0 0 25px;
+    font-family: 'lobster', Cursive ;
+    line-height: 1.9;
+}
+
+.form-container .title:after{
+    content: '';
+    background-color: #83bbce;
+    height: 3px;
+    width: 130px;
+    margin: 10px 0 0;
+    display: block;
+    clear: both;
+    
+}
+.form-container .sub-title{
+    color: #30709C;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+.form-container .form-horizontal{ font-size: 0; }
+.form-container .form-horizontal .form-group{
+    color: #333;
+    width: 90%;
+    padding: 0 8px;
+    margin-left: 150px;
+    display: inline-block;
+}
+.form-container .form-horizontal .form-group:nth-child(4){ margin-bottom: 30px; }
+.form-container .form-horizontal .form-group label{
+    font-size: 17px;
+    font-weight: 600;
+}
+.form-container .form-horizontal .form-control{
+    color: #888;
+    background: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 2px solid #e7e7e7;
+    box-shadow: none;
+   width: 250px;
+}
+.form-container .form-horizontal .form-control:focus{ box-shadow: 0 0 5px #dcdcdc; }
+
+
+.form-container .signin-link{
+    color: #333;
+    font-size: 14px;
+    width: calc(100% - 190px);
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+.form-container .signin-link a{
+    color: #CAE6F1;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+.form-container .signin-link a:hover{ text-decoration: underline; }
+.signup{
+    color: #CAE6F1;
+    background: #30709C;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'lobster', Cursive ;
+    letter-spacing: 1px;
+    width: 130px;
+    padding: 8px 15px 9px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    margin-left: 220px;
+}
+.form-container .form-horizontal .btn:hover,
+.form-container .form-horizontal .btn:focus{
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px rgba(0,0,0,0.15),5px 5px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+@media only screen and (max-width:479px){
+    .form-container .form-horizontal .form-group{ width: 100%;
+   
+    }
+
+    .form-container .signin-link{
+        width: 100%;
+        margin: 0 10px 15px;
+    }}
+
+    .fa , .fab {
+        color:#30709C;
+        font-size : 3rem ; 
+        cursor: pointer;
+        margin-left: 230px;
+    
+    
+    }

@@ -1,0 +1,99 @@
+
+<!--navbar-->
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg "  >
+   
+    <a class="navbar-brand"  (click)="accueil()" ><i class="fa fa-lightbulb-o" aria-hidden="true"></i>5ademni.tn</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mx-auto">
+        
+        <li  class="nav-item">
+          <a class="nav-link" (click)=" categorie()">Services </a>
+        
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" (click)=" contact()">Contact </a>
+        
+        </li>
+     
+        <li class="nav-item">
+          <button class="btn" (click)="job()" *ngIf="authenticationService.isUser1()" >Trouvez un job</button>
+        </li>
+
+       
+        <li class="nav-item">
+          <button class="btn" (click)="annonce()" *ngIf="authenticationService.isUser2()" >Poster une annonce </button>
+        </li>
+        
+        <li class="nav-item">
+          <button class="btn" (click)="job()" *ngIf="authenticationService.isUser2()" >Trouvez un job</button>
+        </li>
+
+        <li class="nav-item">
+          <button class="btn" (click)="job()" *ngIf="!authenticationService.isloggedIn" >Trouvez un job</button>
+        </li>
+<!--drop-->
+   <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isUser1()">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" (click)="profiljobbeur()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
+            <li><a class="dropdown-item" (click)="userjobbeur()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
+            <li><a class="dropdown-item" (click)="missions()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes missions</i></a></li>
+            <li><a class="dropdown-item" (click)="statistique()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
+            <li><a class="dropdown-item" (click)="notes()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-star-half-o" aria-hidden="true" >  Mes Notes</i></a></li>
+          
+          </ul>
+        </li>
+
+<!--fin-->  
+<!--drop-->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isUser2()">
+    <i class="fa fa-user-o" aria-hidden="true"></i>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" (click)="profilclient()" *ngIf="authenticationService.isUser2()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
+    <li><a class="dropdown-item" (click)="userclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
+    <li><a class="dropdown-item" (click)="missionsclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes missions</i></a></li>
+    <li><a class="dropdown-item" (click)="statistiqueclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
+   
+  
+  </ul>
+</li>
+
+<!--fin-->  
+<li class="nav-item"> 
+   <a class="nav-link" *ngIf="authenticationService.isAdmin()">
+    <i class="fa fa-tachometer" aria-hidden="true" (click)="dashboard()"></i> </a> </li>
+    
+    <li class="nav-item"> 
+    <a class="nav-link" *ngIf="authenticationService.isUser2()" routerLink="/dashbordJobber/postulations">
+      <i class="fa fa-tachometer" aria-hidden="true"></i> </a> </li>
+      
+<!--hhhh-->
+
+
+  </ul>
+<!--fin-->
+
+<form class="d-flex">
+  <span > <i *ngIf="!authenticationService.isloggedIn" class="fa fa-user" aria-hidden="true" (click)="connexion()"  ></i></span>
+  <span> <i  *ngIf="!authenticationService.isloggedIn" class="fa fa-user-plus" aria-hidden="true" (click)="inscription()"></i></span>
+</form>
+        <form class="d-flex">
+          
+          <span><i *ngIf="authenticationService.isloggedIn" class="fa fa-power-off" aria-hidden="true" (click)="logout()"></i></span>
+        
+        </form>
+</div></nav></div>
+<!--close-navbar-->
+
+  

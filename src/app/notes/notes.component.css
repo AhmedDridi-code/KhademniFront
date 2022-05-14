@@ -1,0 +1,49 @@
+
+
+
+    .container{
+        width: 45%;
+        height: 5px;
+    }
+    .img-thumbnail {
+        padding: 0.25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 200px;
+        width: 25%;
+        height: auto;
+        margin-left:120px;
+    }
+    .fa , .fab {
+        color:#CAE6F1;
+        font-size : 1.7rem ; 
+        cursor: pointer;
+        margin-right: 7px;
+    
+    
+    }
+    .h2 , h2{
+        color: #30709C;
+        font-size : 2rem;
+        font-family: 'lobster', Cursive ;
+        
+        letter-spacing: 2.5px;  
+
+    }
+    .h1 , h1{
+        color: #7e8486;
+        font-size : 1.1rem;
+        font-family: 'lobster', Cursive ;
+        margin-left: 45px;
+        letter-spacing: 2.5px;  
+
+    }
+    .h4 , h4{
+        color: #83bbce;
+        font-size : 2rem;
+        font-family: 'lobster', Cursive ;
+        line-height: 1.5;
+       
+        margin-left: 4px ;  
+    }
+  

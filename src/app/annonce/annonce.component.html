@@ -1,0 +1,92 @@
+
+<!---->
+
+<div class="form-bg">
+    <div class="container mt-2"> 
+        <br>
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3"></div>
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-container">
+              
+                  <!--p-->
+                  <form class="form-horizontal" [formGroup]="jobOffer">
+                    <div class="form-group">
+                  <label for="selection">De quel service avez-vous besoin ?</label> 
+                  <select id="selection" class="form-control" formControlName="service" name="services"   [ngClass]="{'form-invalid':jobOffer.controls['service'].touched && jobOffer.controls['service'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['service'].touched && !jobOffer.controls['service'].errors?.['required']}">
+                    <option value="">Services...</option>
+                   
+                    <optgroup label="Garde d'enfants">
+                      <option value="Nounou">Nounou</option>
+                      <option value="Baby-sitter">Baby-sitter</option>
+                      <option value="Soutien scolaire">Soutien scolaire</option></optgroup>
+                      <optgroup label="Aide a domicile pour les personnes âgées">
+                      <option value="Aide ménagère">Aide ménagère</option>
+                      <option value="Accompagnement les personnes âgées">Accompagnement les personnes âgées</option>
+                      <option value="À la prise des médicaments">À la prise des médicaments</option>
+                    </optgroup>
+                    <optgroup label="Bricolage">
+                      <option value="Peinture des murs">Peinture des murs</option>
+                      <option value="Électricité">Électricité</option>
+                      <option value="Déménagement">Déménagement</option>
+                    </optgroup>
+                    </select>
+                    
+                </div>
+                    <br><br>
+            
+                  <!--p-->
+              
+                    
+                      
+                      <div class="form-group">
+                          
+                        <label>Ville</label>
+                        <input type="text" class="form-control" placeholder="Ville" formControlName="ville" [ngClass]="{'form-invalid':jobOffer.controls['ville'].touched && jobOffer.controls['ville'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['ville'].touched && !jobOffer.controls['ville'].errors?.['required']}">
+                        
+                      </div><br>
+                      
+                      <div class="form-group">
+                          
+                            <label>Adresse </label>
+                            <input type="text" class="form-control" placeholder="Adresse" formControlName="addresse" [ngClass]="{'form-invalid':jobOffer.controls['addresse'].touched && jobOffer.controls['addresse'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['addresse'].touched && !jobOffer.controls['addresse'].errors?.['required']}">
+                            
+                            
+                          </div><br>
+
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" class="form-control" placeholder="Date"  name="date" formControlName="date"  [ngClass]="{'form-invalid':jobOffer.controls['date'].touched && jobOffer.controls['date'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['date'].touched && !jobOffer.controls['date'].errors?.['required']}">
+                           
+                          </div><br>
+
+                        <div class="form-group">
+                            <label> Prix</label>
+                            <input type="number" class="form-control" placeholder="Prix" formControlName="prix" [ngClass]="{'form-invalid':jobOffer.controls['prix'].touched && jobOffer.controls['prix'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['prix'].touched && !jobOffer.controls['prix'].errors?.['required']}">
+                           
+                          </div><br>
+
+
+                        <div class="form-group">
+                            <label>Description</label>
+                        
+                            <textarea class="form-control" id="description" formControlName="description" name="description" class="form-control ng-untouched ng-pristine ng-valid" [ngClass]="{'form-invalid':jobOffer.controls['description'].touched && jobOffer.controls['description'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['description'].touched && !jobOffer.controls['description'].errors?.['required']}"></textarea>
+                           
+                            
+                     
+                        
+                       
+                        
+                       </div>
+                        <button class="btn signup"  (click)="addJob()" >
+                      
+                          Poster ma demande</button>
+                    </form> <br>
+                   
+                 
+                    </div></div></div></div></div>
+                    <div class="main"> <br>
+                      <h3>{{ message }}</h3>
+                    </div>
+<br><br><br>

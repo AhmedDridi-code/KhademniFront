@@ -1,0 +1,244 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="main1" id="sidebar-wrapper">
+        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold  border-bottom" (click)="dashboard()"_>
+            <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</div> <br>
+                <div class="list-group list-group-flush my-3">
+                    
+                    <a  class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashservices()">
+                        <i class="fa fa-pie-chart" aria-hidden="true" ></i> Services</a> <br><br>
+                   
+                    <a  class="list-group-item list-group-item-action second-text fw-bold" (click)="dashjobbeurs()">
+                        <i class="fa fa-users" aria-hidden="true" ></i> Jobbeurs</a> <br> <br>
+                    <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashclients()">
+                        <i class="fa fa-users" aria-hidden="true" ></i> Clients</a> <br> <br>
+                    <a  class="list-group-item list-group-item-action  second-text fw-bold"  (click)="dashcontact()">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> Contact</a> <br> <br>
+                  
+                    <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="logout()">
+                        <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</a>
+                </div>
+            </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+            <div class="d-flex align-items-center">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <h2 class="fs-2 m-0"> Dashboard</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </nav>
+
+        <div class="container-fluid px-4">
+            <div class="row g-3 my-2">
+                <div class="col-md-3 ">
+                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div class="main4">
+                            <h3 class="fs-2">720</h3>
+                            <p class="fs-5">Visiteurs</p>
+                        </div>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div class="main4">
+                            <h3 class="fs-2">1200</h3>
+                            <p class="fs-5">Jobbeurs</p>
+                        </div>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div class="main4">
+                            <h3 class="fs-2">3899</h3>
+                            <p class="fs-5">Clients</p>
+                        </div>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div class="main4">
+                            <h3 class="fs-2">9</h3>
+                            <p class="fs-5">Services</p>
+                        </div>
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-4">
+                <div class="main">
+                <div class="row g-3 my-2">
+                    <div class="col-md-8 ">
+           
+                <h3 class="fs-4 mb-3">Services</h3>
+                <div class="col">
+                    <table class="table  rounded1 shadow-sm  table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Catégorie</th>
+                           
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="assets/image/nounou.PNG" width="100" class="user-img "></td>
+                                <td>Nounou</td>
+                                <td>Confiage d'enfants</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/baby-sitter.PNG" width="100" class="user-img "></td>
+                                <td>Baby-sitter</td>
+                                <td>Confiage d'enfants</td>
+                               
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/soutien-scolaire.PNG" width="100" class="user-img "></td>
+                                <td>Soutien-scolaire</td>
+                                <td>Confiage d'enfants</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/menage.PNG" width="100" class="user-img "></td>
+                                <td>Aide ménagère</td>
+                                <td>Aide a domicile pour les personnes agees</td>
+                               
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/accomp.PNG" width="100" class="user-img "></td>
+                                <td>Accompagnement</td>
+                                <td>Aide a domicile pour les personnes agees</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/repas.PNG" width="100" class="user-img "></td>
+                                <td>À la prise des médicaments</td>
+                                <td>Aide a domicile pour les personnes agees</td>
+                            
+                            </tr>
+                            <tr>
+                               
+                                <td><img src="assets/image/peintureunmur.jpeg" width="100" class="user-img "></td>
+                                <td>Peinture des murs</td>
+                                <td>Brcolage-petits travaux</td>
+                               
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/installerunesuspension.jpg" width="100" class="user-img "></td>
+                                <td>Électricité</td>
+                                <td>Brcolage-petits travaux</td>
+                             
+                            </tr>
+                            <tr>
+                                <td><img src="assets/image/czrton.PNG" width="100" class="user-img "></td>
+                                <td>Déménagement</td>
+                                <td>Brcolage-petits travaux</td>
+                               
+                            </tr>
+                           
+                           
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+  
+        <div class="col-md-4 ">
+
+            <h3 class="fs-4 mb-3">Nouveaux utilisateurs</h3>
+            <div class="col">
+                <table class="table  rounded1 shadow-sm  table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Utilisiteur</th>
+                            <th scope="col">Role</th>
+                       
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        <tr>
+                           <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Majdi</td>
+                            <td>Jobbeur</td>
+                            
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Jouri</td>
+                            <td>Cliente</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Jad</td>
+                            <td>Jobbeur</td>
+                            
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Iyed</td>
+                            <td>Jobbeur</td>
+                            
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Lyna</td>
+                            <td>Cliente</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Aymen</td>
+                            <td>Jobbeur</td>
+                        
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Ayla</td>
+                            <td>Cliente</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Majd</td>
+                            <td>Jobbeur</td>
+                         
+                        </tr>
+                        <tr>
+                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>Lyne</td>
+                            <td>Cliente</td>
+                           
+                        </tr>
+                       
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->

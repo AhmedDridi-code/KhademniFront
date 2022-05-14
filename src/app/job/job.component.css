@@ -1,0 +1,106 @@
+.form-groupe{
+  color: #CAE6F1;
+          text-align: left;
+          font-size:1.3rem;
+          font-weight:1080;
+     
+          font-family: 'Roboto', sans-serif;
+
+         }
+         .input-group {
+          right:300px;
+          left:379px;
+          position:absolute;
+          width:78%;
+          height:6vh;
+         }
+       
+         .btn-group{
+          right:200px;
+          left:400px;
+          position:absolute;
+          width:25%;
+         height:6vh;
+         }
+        
+         .container-fluid h1 {
+          text-align: center;
+          font-size : 3rem;
+          color: #30709C;
+          font-family: 'lobster', Cursive ;
+          line-height: 1.9;}
+          .container-fluid p {
+              text-align: center;
+          
+              font-size : 1.5rem;
+              
+              color :#83bbce;
+              font-family: 'lobster', Cursive ;
+              line-height: 1.9;
+          }
+         
+         .input-group-append .btn1 {
+          position:absolute;
+          width:15%;
+          height:6vh;
+          left:299px;
+          color:rgb(82, 76, 79);
+         
+          background-color: transparent;
+          border: 1px solid #cececb;
+        
+          font-size: 1.5rem;
+          border-radius: .25rem;
+         }
+      
+         .card {
+           right: 50px;
+           left:250px;
+          width:63%;
+          height:30vh;
+         
+          box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+          border-radius: 5px;
+          margin: 0 0 2rem 0;
+         
+          color: #242323;
+          
+        }
+
+        
+      
+            
+    
+     .rounded-circle{
+       margin-right: 100px;
+       width: 80px;
+     }
+      
+   
+      .box-pensil {
+
+          cursor: pointer;
+          font-size: 15px;
+          padding-right: 10px;
+          padding-left: 10px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          border-radius: 4px;
+          margin-left: 150px;
+        
+      }
+
+      .main h5 {
+        font-size : 1.5rem;
+        color: #3e779e;
+        font-family: 'lobster', Cursive ;
+        line-height: 1;  
+      }
+      .main .fa {
+        color: #30709C;
+        margin-left: 450px;
+      }
+
+      .btn .fa{
+        color: #30709C;
+      }

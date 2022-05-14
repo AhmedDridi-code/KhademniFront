@@ -1,0 +1,104 @@
+body{margin-top:20px;}
+
+.container h1 {
+    text-align: center;
+    font-size : 2.3rem;
+    color: #30709C;
+    font-family: 'lobster', Cursive ;
+    line-height: 1.9;}
+    .container h2 {
+        text-align: center;
+        font-size : 2rem;
+        color: #83bbce;
+        font-family: 'lobster', Cursive ;
+        line-height: 1.9;}
+        .container h5 {
+            text-align: center;
+            font-size : 1.5rem;
+            color: #83bbce;
+            font-family: 'lobster', Cursive ;
+            line-height: 1.9;}
+     .div .row.text-center {
+         margin-left: 500px;
+     }  
+    
+.single-pricing{
+background:rgb(236, 235, 235);
+padding:40px 20px;
+border-radius:5px;
+position:relative;
+z-index:2;
+border:1px solid #eee;
+box-shadow: 0 10px 40px -10px rgba(0,64,128,.09);
+transition:0.3s;
+
+}
+.container p{
+    text-align: left;
+    font-size: 0.83rem;
+    color: #30709C;
+}
+@media only screen and (max-width:480px) { 
+.single-pricing {margin-bottom:30px;}
+}
+.single-pricing:hover{
+box-shadow:0px 60px 60px rgba(0,0,0,0.1);
+z-index:100;
+transform: translate(0, -10px);
+}
+.price-label {
+    color: #fff;
+	background: #83bbce;
+	font-size: 16px;
+	width: 100px;
+	margin-bottom: 15px;
+	display: block;
+	-webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+	clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+	margin-left: -20px;
+	position: absolute;
+}
+.price-head h2 {
+	font-weight: 600;
+	margin-bottom: 0px;
+	text-transform: capitalize;
+	font-size: 2rem;
+    color: #83bbce;
+}
+.price-head span {
+	display: inline-block;
+	background:#83bbce;
+	width: 6px;
+	height: 6px;
+	border-radius: 30px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+.price {
+	font-weight: 500;
+	font-size: 50px;
+	margin-bottom: 0px;
+}
+
+
+
+
+
+.single-pricing a {
+background:none;
+border: 2px solid #83bbce;
+border-radius: 5000px;
+color: #30709C;
+display: inline-block;
+font-size: 1.1rem;
+overflow: hidden;
+padding:10px 45px;
+text-transform: capitalize;
+transition: all 0.3s ease 0s;
+}
+.single-pricing a:hover{
+    background:#83bbce;
+}
+.pricing-content{
+    margin-left: 200px;
+}

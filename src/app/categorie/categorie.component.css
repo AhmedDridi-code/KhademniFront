@@ -1,0 +1,53 @@
+
+.main4 h2 {
+    text-align: center;
+    font-size : 3rem;
+    color: #30709C;
+    font-family: 'lobster', Cursive ;
+    line-height: 1.9;}
+.main4 a {
+    margin-right:120px;
+    text-align: right;
+    font-size : 1.3rem;
+    color: #30709C;
+    font-family: 'lobster', Cursive ;
+    line-height: 1.9;}
+ 
+    .main4 p {
+   margin-left: 40px;
+  text-align: left;
+        font-size : 1.5rem;
+        
+        color :#83bbce;;
+        font-family: 'lobster', Cursive ;
+        line-height: 1.9;
+    }
+    .main4 p:after{
+        content: '';
+        background-color: #CAE6F1;
+        height: 3px;
+        width: 90px;
+        margin: 10px 0 0;
+        display: block;
+        clear: both;
+        
+    }
+ 
+   
+    .main4 .card {
+        margin-left: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: transparent;
+        background-clip: border-box;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+   .next1{
+        background-color:rgb(250, 250, 250);}
+    .next2{
+        background-color:white
+    }

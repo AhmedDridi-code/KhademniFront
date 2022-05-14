@@ -1,0 +1,17 @@
+
+.container h1 {
+    text-align: center;
+    font-size : 3rem;
+    color: #30709C;
+    font-family: 'lobster', Cursive ;
+    line-height: 1.9;}
+    .container .fa{
+        color:#30709C;
+    }
+    .container .btn{
+        color:#30709C;
+    }
+    .container .form-group{
+        color:#050505;
+        font-size: 1.3rem;
+    }

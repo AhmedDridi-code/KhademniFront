@@ -1,0 +1,101 @@
+
+
+    .img-thumbnail {
+        padding: 0.25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 100px;
+        width: 10%;
+        height: auto;
+        margin-left: 350px;
+    }
+
+
+    
+
+    .form-container1{
+        background-color: transparent;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 0;
+        padding: 50px;
+        border-radius: 20px;    
+        margin-left: 380px;
+        
+    }
+
+    
+    .form-container{
+        background-color: transparent;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 0;
+        padding: 50px;
+        border-radius: 20px;
+
+        
+    }
+    .h4, h4{
+        color: #83bbce;
+        font-size : 2rem;
+        font-family: 'lobster', Cursive ;
+        line-height: 1.5;
+       
+    }
+  
+
+    .form-container1 .sub-title{
+        color: #30709C;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+    }
+  
+    .form-container .form-horizontal .form-group{
+        color: #333;
+        width: 50%;
+        padding: 0 8px;
+        margin: 0 0 15px;
+        display: inline-block;
+    }
+   
+    .form-container .form-horizontal .form-group label{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .form-container .form-horizontal .form-control{
+        color: #888;
+        background: #fff;
+        font-weight: 400;
+        letter-spacing: 1px;
+        height: 40px;
+        padding: 6px 12px;
+        border-radius: 10px;
+        border: 2px solid #e7e7e7;
+        box-shadow: none;
+    }
+
+
+
+    .form-container .form-horizontal .signup{
+        color: #CAE6F1;
+        background: #30709C;
+        font-size: 1.1rem;
+       
+        font-family: 'lobster', Cursive ;
+        letter-spacing: 1px;
+        width: 180px;
+        height: 65px;
+        padding: 8px 15px 9px;
+        border-radius: 10px;
+        transition: all 0.3s ease 0s;
+        margin-left: 200px;
+   
+ 
+    }
+
+    
+
+
+
+    
