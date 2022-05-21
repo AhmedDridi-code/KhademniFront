@@ -15,3 +15,11 @@
         color:#050505;
         font-size: 1.3rem;
     }
+
+
+    .form-invalid{
+        border-color: #ED4337  !important;
+        }
+    .form-valid{
+        border-color:#23DC3D !important;
+        }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-dashclients',
@@ -8,10 +9,21 @@ import { AuthenticationService } from '../service/authentication.service';
   styleUrls: ['./dashclients.component.css']
 })
 export class DashclientsComponent implements OnInit {
+  clients:any[]=[];
   constructor(private router :Router , 
-    public authenticationService: AuthenticationService) { }
+    public authenticationService: AuthenticationService, public userService:UserService) { }
 
   ngOnInit(): void {
+    this.userService.getUserByRole("CLIENT").subscribe((response:any) => {
+      this.clients=response;
+      console.log(response);
+    })
+  }
+
+  deleteClient(id:number){
+    this.userService.deleteUser(id).subscribe((response:any) => {
+      this.clients = this.clients.filter(client => client.id != id);
+    })
   }
 
   dashboard(){

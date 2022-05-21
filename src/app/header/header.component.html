@@ -23,16 +23,16 @@
         </li>
      
         <li class="nav-item">
-          <button class="btn" (click)="job()" *ngIf="authenticationService.isUser1()" >Trouvez un job</button>
+          <button class="btn" (click)="job()" *ngIf="authenticationService.isJobber()" >Trouvez un job</button>
         </li>
 
        
         <li class="nav-item">
-          <button class="btn" (click)="annonce()" *ngIf="authenticationService.isUser2()" >Poster une annonce </button>
+          <button class="btn" (click)="annonce()" *ngIf="authenticationService.isClient()" >Poster une annonce </button>
         </li>
         
         <li class="nav-item">
-          <button class="btn" (click)="job()" *ngIf="authenticationService.isUser2()" >Trouvez un job</button>
+          <button class="btn" (click)="job()" *ngIf="authenticationService.isClient()" >Trouvez un job</button>
         </li>
 
         <li class="nav-item">
@@ -40,15 +40,15 @@
         </li>
 <!--drop-->
    <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isUser1()">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isJobber()">
             <i class="fa fa-user-o" aria-hidden="true"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" (click)="profiljobbeur()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
-            <li><a class="dropdown-item" (click)="userjobbeur()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
-            <li><a class="dropdown-item" (click)="missions()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes missions</i></a></li>
-            <li><a class="dropdown-item" (click)="statistique()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
-            <li><a class="dropdown-item" (click)="notes()" *ngIf="authenticationService.isUser1()"> <i class="fa fa-star-half-o" aria-hidden="true" >  Mes Notes</i></a></li>
+            <li><a class="dropdown-item" (click)="profiljobbeur()" *ngIf="authenticationService.isJobber()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
+            <li><a class="dropdown-item" (click)="userjobbeur()" *ngIf="authenticationService.isJobber()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
+            <li><a class="dropdown-item" (click)="missions()" *ngIf="authenticationService.isJobber()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes missions</i></a></li>
+            <li><a class="dropdown-item" (click)="statistique()" *ngIf="authenticationService.isJobber()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
+            <li><a class="dropdown-item" (click)="notes()" *ngIf="authenticationService.isJobber()"> <i class="fa fa-star-half-o" aria-hidden="true" >  Mes Notes</i></a></li>
           
           </ul>
         </li>
@@ -56,14 +56,14 @@
 <!--fin-->  
 <!--drop-->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isUser2()">
+  <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authenticationService.isClient()">
     <i class="fa fa-user-o" aria-hidden="true"></i>
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <li><a class="dropdown-item" (click)="profilclient()" *ngIf="authenticationService.isUser2()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
-    <li><a class="dropdown-item" (click)="userclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
-    <li><a class="dropdown-item" (click)="missionsclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes missions</i></a></li>
-    <li><a class="dropdown-item" (click)="statistiqueclient()"*ngIf="authenticationService.isUser2()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
+    <li><a class="dropdown-item" (click)="profilclient()" *ngIf="authenticationService.isClient()"> <i class="fa fa-user-circle" aria-hidden="true">  Mon profil</i></a></li>
+    <li><a class="dropdown-item" (click)="userclient()"*ngIf="authenticationService.isClient()"> <i class="fa fa-cog" aria-hidden="true">  Mon identité</i></a></li>
+    <li><a class="dropdown-item" (click)="missionsclient()"*ngIf="authenticationService.isClient()"> <i class="fa fa-plus-circle" aria-hidden="true" >  Mes annonces</i></a></li>
+    <li><a class="dropdown-item" (click)="statistiqueclient()"*ngIf="authenticationService.isClient()"> <i class="fa fa-eye" aria-hidden="true" >  Mes statistiques</i></a></li>
    
   
   </ul>
@@ -75,7 +75,7 @@
     <i class="fa fa-tachometer" aria-hidden="true" (click)="dashboard()"></i> </a> </li>
     
     <li class="nav-item"> 
-    <a class="nav-link" *ngIf="authenticationService.isUser2()" routerLink="/dashbordJobber/postulations">
+    <a class="nav-link" *ngIf="authenticationService.isClient()" routerLink="/dashbordJobber/postulations">
       <i class="fa fa-tachometer" aria-hidden="true"></i> </a> </li>
       
 <!--hhhh-->

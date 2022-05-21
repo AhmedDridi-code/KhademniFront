@@ -2,15 +2,16 @@
     <!-- Sidebar -->
     <div class="main1" id="sidebar-wrapper">
         <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold  border-bottom" (click)="dashboard()">
-            <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</div> <br>
-            
-                <div class="list-group list-group-flush my-3">   
-                    <a  class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashboard()">
-                        <i class="fa fa-pie-chart" aria-hidden="true" ></i> Postulations </a> <br><br>
-                    <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="logout()">
-                        <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</a>
-                </div>
-            </div>
+            <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+        </div> <br>
+
+        <div class="list-group list-group-flush my-3">
+            <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashboard()">
+                <i class="fa fa-pie-chart" aria-hidden="true"></i> Postulations </a> <br><br>
+            <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="logout()">
+                <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</a>
+        </div>
+    </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
@@ -22,8 +23,8 @@
             </div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -35,7 +36,7 @@
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
                             <h3 class="fs-2">720</h3>
-                            <p class="fs-5">Visiteurs</p>
+                            <p class="fs-5">Postulations</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>
                     </div>
@@ -45,47 +46,26 @@
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
                             <h3 class="fs-2">1200</h3>
-                            <p class="fs-5">Jobbeurs</p>
+                            <p class="fs-5">Offre</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
-                        <div class="main4">
-                            <h3 class="fs-2">3899</h3>
-                            <p class="fs-5">Clients</p>
-                        </div>
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
-                        <div class="main4">
-                            <h3 class="fs-2">9</h3>
-                            <p class="fs-5">Services</p>
-                        </div>
-                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
-
                     </div>
                 </div>
             </div>
             <div class="container-fluid px-4">
                 <div class="main">
-                <div class="row g-3 my-2">
-                    <div>
-           
-                
-                <div class="col">
-                    <router-outlet></router-outlet>
-                    
+                    <div class="row g-3 my-2">
+                        <div>
+
+
+                            <div class="col">
+                                <router-outlet></router-outlet>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-
-    </div>
         </div>
-    </div>
-</div>
-<!-- /#page-content-wrapper -->
+        <!-- /#page-content-wrapper -->

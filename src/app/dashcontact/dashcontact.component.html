@@ -37,49 +37,6 @@
             
         </nav>
 
-        <section id="contact">
-            <div class="container mt-2">
-               
-                
-                <div class="row" >
-                
-                    <div class="col-md-6">
-                  
-                  
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6386.356537520878!2d10.323196400000002!3d36.8382064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2stn!4v1645804158278!5m2!1sfr!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-                
-           
-                    <!--maps-->
-                
-          
-                <div class="col-md-5">
-                   
-                    <div class="rounded2">
-                  <form> <br>
-                   <br>
-                    <div class="form-group">
-                       Votre Email:
-                      <input type="email" class="form-control" name="" value="">
-                    </div>
-                    <div class="form-group">
-                     Votre telephone:
-                      <input type="tel" class="form-control" name="" value="" >
-                    </div>
-                    <div class="form-group">
-                   Votre message:
-                      <textarea class="form-control" name="" rows="3" ></textarea>
-                    </div><br> <br>
-                    <button class="btn " type="submit" name="button">
-                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer
-                    </button>
-                  </form>
-              <br><br>  
-            </div>
-        </div></div></div></section>
-
-
-
 <div class="container-fluid px-4">
     <div class="main">
  <br><br>
@@ -95,43 +52,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let contact of contacts">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.phone}}</td>
+                    <td>{{contact.message}}</td>
                     
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   
-                </tr>
-              
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   
-                </tr>
-               
+                </tr>               
                
             </tbody>
         </table>

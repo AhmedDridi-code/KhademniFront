@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobService } from '../service/job.service';
 
 @Component({
   selector: 'app-statistiqueclient',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatistiqueclientComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private jobService : JobService) { }
+  jobs=0;
   ngOnInit(): void {
+    this.jobService.listeMyJobs().subscribe((jobs:any) => {
+      this.jobs = jobs.length;
+      console.log(this.jobs);
+      console.log(jobs)
+    })
   }
 
 }

@@ -52,7 +52,7 @@
                 <div class="col-md-3">
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
-                            <h3 class="fs-2">1200</h3>
+                            <h3 class="fs-2">{{jobberCount}}</h3>
                             <p class="fs-5">Jobbeurs</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
                 <div class="col-md-3">
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
-                            <h3 class="fs-2">3899</h3>
+                            <h3 class="fs-2">{{clientCount}}</h3>
                             <p class="fs-5">Clients</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>
@@ -72,7 +72,7 @@
                 <div class="col-md-3">
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
-                            <h3 class="fs-2">9</h3>
+                            <h3 class="fs-2">{{servicesCount}}</h3>
                             <p class="fs-5">Services</p>
                         </div>
                         <i class="fa fa-pie-chart" aria-hidden="true"></i>
@@ -97,63 +97,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><img src="assets/image/nounou.PNG" width="100" class="user-img "></td>
-                                <td>Nounou</td>
-                                <td>Confiage d'enfants</td>
-                                
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/baby-sitter.PNG" width="100" class="user-img "></td>
-                                <td>Baby-sitter</td>
-                                <td>Confiage d'enfants</td>
-                               
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/soutien-scolaire.PNG" width="100" class="user-img "></td>
-                                <td>Soutien-scolaire</td>
-                                <td>Confiage d'enfants</td>
-                                
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/menage.PNG" width="100" class="user-img "></td>
-                                <td>Aide ménagère</td>
-                                <td>Aide a domicile pour les personnes agees</td>
-                               
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/accomp.PNG" width="100" class="user-img "></td>
-                                <td>Accompagnement</td>
-                                <td>Aide a domicile pour les personnes agees</td>
-                                
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/repas.PNG" width="100" class="user-img "></td>
-                                <td>À la prise des médicaments</td>
-                                <td>Aide a domicile pour les personnes agees</td>
-                            
-                            </tr>
-                            <tr>
-                               
-                                <td><img src="assets/image/peintureunmur.jpeg" width="100" class="user-img "></td>
-                                <td>Peinture des murs</td>
-                                <td>Brcolage-petits travaux</td>
-                               
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/installerunesuspension.jpg" width="100" class="user-img "></td>
-                                <td>Électricité</td>
-                                <td>Brcolage-petits travaux</td>
-                             
-                            </tr>
-                            <tr>
-                                <td><img src="assets/image/czrton.PNG" width="100" class="user-img "></td>
-                                <td>Déménagement</td>
-                                <td>Brcolage-petits travaux</td>
-                               
-                            </tr>
-                           
-                           
+                            <tr *ngFor="let service of services">
+                                <td><img src="{{service.image}}" width="100" class="user-img "></td>
+                                <td>{{service.name}}</td>
+                                <td>{{service.category}}</td>  
+  
+                            </tr>                           
                            
                         </tbody>
                     </table>
@@ -175,62 +124,11 @@
                     </thead>
                     <tbody>
                        
-                        <tr>
-                           <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majdi</td>
-                            <td>Jobbeur</td>
-                            
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jouri</td>
-                            <td>Cliente</td>
-                           
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jad</td>
-                            <td>Jobbeur</td>
-                            
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Iyed</td>
-                            <td>Jobbeur</td>
-                            
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyna</td>
-                            <td>Cliente</td>
-                           
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Aymen</td>
-                            <td>Jobbeur</td>
-                        
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Ayla</td>
-                            <td>Cliente</td>
-                           
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majd</td>
-                            <td>Jobbeur</td>
-                         
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyne</td>
-                            <td>Cliente</td>
-                           
-                        </tr>
-                       
-                       
+                        <tr *ngFor="let user of users">
+                            <td> <img  src="{{user?.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                             <td>{{user?.firstName}}</td>
+                             <td>{{user?.role}}</td>
+                         </tr>                       
                        
                     </tbody>
                 </table>

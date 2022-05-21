@@ -56,79 +56,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
-                        <tr>
-                           <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majdi</td>
-                            <td>majdi@gmail.com</td> 
-                            <td>50111222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jouri</td>
-                            <td>jouri@gmail.com</td> 
-                            <td>50222222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jad</td>
-                            <td>jad@gmail.com</td> 
-                            <td>50333222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Iyed</td>
-                            <td>iyed@gmail.com</td> 
-                            <td>50444222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyna</td>
-                            <td>lyna@gmail.com</td> 
-                            <td>50555222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Aymen</td>
-                            <td>aymen@gmail.com</td> 
-                            <td>50666222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Ayla</td>
-                            <td>ayla@gmail.com</td> 
-                            <td>50777222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majd</td>
-                            <td>majd@gmail.com</td> 
-                            <td>50888222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyne</td>
-                            <td>lyne@gmail.com</td> 
-                            <td>50999222</td>
-                            <td>Client</td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
+                        <tr *ngFor="let client of clients">
+                            <td> <img  src="{{client?.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                             <td>{{client?.firstName}}</td>
+                             <td>{{client?.username}}</td>
+                             <td>{{client?.phone}}</td>
+                             <td>{{client?.role}}</td>
+                             <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                             <td> <button  class="btn" (click)="deleteClient(client.id)"> Suspendre </button></td>
+                         </tr>
                        
                        
                        

@@ -8,14 +8,14 @@
              <div class="col-md-2"></div>
                 <div class="col-md-2">
 
-    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">  <br> <br>
+    <img src="{{user.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="avatar img-circle img-thumbnail" alt="avatar">  <br> <br>
 
   
     </div>
        
 <div class="col-md-6"> <br>
     
-    <h5><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Bonjour, 
+    <h5><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Bonjour, {{user.firstName}} {{user.lastName}}
          <button class="btn1" (click)="userclient()"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Editer</button> 
          </h5>
 

@@ -5,52 +5,54 @@
     <div class="row">
       <div class="col-mx-4">
         <div class="btn-group">
-          <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-            <option selected>Toute la Tunisie</option>
-            <option value="">Ariana</option>
-            <option value="">Béja</option>
-            <option value="">Ben Arous</option>
-            <option value="">Bizerte</option>
-            <option value="">Gabès</option>
-            <option value="">Gafsa</option>
-            <option value="">Jendouba</option>
-            <option value="">Kairouan</option>
-            <option value="">Kasserine</option>
-            <option value="">Kébili</option>
-            <option value="">Le Kef</option>
-            <option value="">Mahdia</option>
-            <option value="">La Manouba</option>
-            <option value="">Médenine</option>
-            <option value="">Monastir</option>
-            <option value="">Nabeul</option>
-            <option value="">Sfax</option>
-            <option value="">Sidi Bouzid</option>
-            <option value="">Siliana</option>
-            <option value="">Sousse</option>
-            <option value="">Tataouine</option>
-            <option value="">Touzeur </option>
-            <option value="">Tunis</option>
-            <option value="">Zaghouan</option>
+          <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" #cityInput
+            (change)="setVille(cityInput.value)">
+            <option selected value="">Toute la Tunisie</option>
+            <option value="Ariana">Ariana</option>
+            <option value="Béja">Béja</option>
+            <option value="Ben Arous">Ben Arous</option>
+            <option value="Bizerte">Bizerte</option>
+            <option value="Gabès">Gabès</option>
+            <option value="Gafsa">Gafsa</option>
+            <option value="Jendouba">Jendouba</option>
+            <option value="Kairouan">Kairouan</option>
+            <option value="Kasserine">Kasserine</option>
+            <option value="Kébili">Kébili</option>
+            <option value="Le Kef">Le Kef</option>
+            <option value="Mahdia">Mahdia</option>
+            <option value="La Manouba">La Manouba</option>
+            <option value="Médenine">Médenine</option>
+            <option value="Monastir">Monastir</option>
+            <option value="Nabeul">Nabeul</option>
+            <option value="Sfax">Sfax</option>
+            <option value="Sidi Bouzid">Sidi Bouzid</option>
+            <option value="Siliana">Siliana</option>
+            <option value="Sousse">Sousse</option>
+            <option value="Tataouine">Tataouine</option>
+            <option value="Touzeur">Touzeur </option>
+            <option value="Tunis">Tunis</option>
+            <option value="Zaghouan">Zaghouan</option>
           </select>
 
           <div class="col-mx-6">
             <div class="input-group">
-              <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                <option selected>Services...</option>
+              <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+                #serviceInput (change)="setService(serviceInput.value)">
+                <option selected value="">Services...</option>
                 <optgroup label="Garde d'enfants">
-                  <option value="">Nounou</option>
-                  <option value="">Baby-sitter</option>
-                  <option value="">Soutien scolaire</option>
+                  <option value="Nounou">Nounou</option>
+                  <option value="Baby-sitter">Baby-sitter</option>
+                  <option value="Soutien scolaire">Soutien scolaire</option>
                 </optgroup>
                 <optgroup label="Aide a domicile pour les personnes âgées">
-                  <option value="">Aide ménagère</option>
-                  <option value="">Accompagnement les personnes âgées</option>
-                  <option value="">À la prise des médicaments</option>
+                  <option value="Aide ménagère">Aide ménagère</option>
+                  <option value="Accompagnement les personnes âgées">Accompagnement les personnes âgées</option>
+                  <option value="À la prise des médicaments">À la prise des médicaments</option>
                 </optgroup>
                 <optgroup label="Bricolage">
-                  <option value="">Peinture des murs</option>
-                  <option value="">Électricité</option>
-                  <option value="">Déménagement</option>
+                  <option value="Peinture des murs">Peinture des murs</option>
+                  <option value="Électricité">Électricité</option>
+                  <option value="Déménagement">Déménagement</option>
                 </optgroup>
               </select>
 
@@ -67,39 +69,47 @@
 </section><br><br>
 
 <section>
-  <div class="container-fluid">
+  <div class="container-fluid mt-5">
     <p>Les dernieres annonces de petits boulots sur 5ademni.tn</p>
-    <div class="container mt-2">
+    <div class="container mt-3">
 
-      <div class=" card height-100 row d-flex justify-content-center align-items-center" *ngFor="let job of jobs">
+      <div class=" card height-100 row d-flex justify-content-center align-items-center"
+        *ngFor="let job of jobs | filter:serviceInput.value:cityInput.value">
         <div class="col-md-14">
           <div class="p-3  rounded">
             <div class="d-flex justify-content-between">
               <div class="d-flex flex-row align-items-center">
-                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="rounded-circle">
+                <img src="{{job.user.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}"
+                  class="rounded-circle">
                 <div class="col-md-9">
                   <div class="ml-2">
-                    <div class="main"> <i class="fa fa-calendar" aria-hidden="true" > {{date | date : 'dd/MM/yyyy'}}</i>
-                      <h5  >{{job.nom}} </h5>
+                    <div class="main"> <i class="fa fa-calendar" aria-hidden="true"> {{job.date | date :
+                        'dd/MM/yyyy'}}</i>
+                      <h5>{{job.user.firstName}} {{job.user.lastName}}</h5>
                     </div> <br>
-                    <h6 >{{job.description}} </h6>
+                    <h6>{{job.description}} </h6>
 
 
 
                   </div>
                   <br>
+                  <div class="row">
+                    <div class="d-flex flex-row col-md-9"> <span class="mr-2">
 
-                  <div class="d-flex flex-row"> <span class="mr-2">
+                        <a class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>
+                            {{job.adresse}},{{job.ville}}</strong></a>
 
-                      <a class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>
-                          {{job.adresse}},{{job.ville}}</strong></a>
+                        <a class="btn"><i class="fa fa-tag" aria-hidden="true"> </i> <strong>
+                            {{job.service}}</strong></a>
+                        <a class="btn"> <i class="fa fa-money" aria-hidden="true"></i><strong> {{job.prix}}</strong></a>
 
-                      <a class="btn"><i class="fa fa-tag" aria-hidden="true"> </i> <strong> {{job.services}}</strong></a>
-                      <a class="btn"> <i class="fa fa-money" aria-hidden="true"></i><strong> {{job.prix}}</strong></a>
+                      </span>
 
-                    </span>
+                    </div>
 
+                    <button class="btn btn-primary col-md-3" (click)="postuler(job.id)" *ngIf="auth.isJobber()">Postuler</button>
                   </div>
+
                 </div>
 
 

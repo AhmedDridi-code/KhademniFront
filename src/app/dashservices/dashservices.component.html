@@ -45,64 +45,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><img src="assets/image/nounou.PNG" width="100" class="user-img "></td>
-                    <td>Nounou</td>
-                    <td>Confiage d'enfants</td>
-                    
+                <tr *ngFor="let service of servicesList">
+                    <td><img src="{{service.image}}" width="100" class="user-img "></td>
+                    <td>{{service.name}}</td>
+                    <td>{{service.category}}</td>  
+                    <td><i class="fa-solid fa-circle-xmark" (click)="deleteService(service.id)"></i></td>   
                 </tr>
-                <tr>
-                    <td><img src="assets/image/baby-sitter.PNG" width="100" class="user-img "></td>
-                    <td>Baby-sitter</td>
-                    <td>Confiage d'enfants</td>
-                   
-                </tr>
-                <tr>
-                    <td><img src="assets/image/soutien-scolaire.PNG" width="100" class="user-img "></td>
-                    <td>Soutien-scolaire</td>
-                    <td>Confiage d'enfants</td>
-                    
-                </tr>
-                <tr>
-                    <td><img src="assets/image/menage.PNG" width="100" class="user-img "></td>
-                    <td>Aide ménagère</td>
-                    <td>Aide a domicile pour les personnes agees</td>
-                   
-                </tr>
-                <tr>
-                    <td><img src="assets/image/accomp.PNG" width="100" class="user-img "></td>
-                    <td>Accompagnement</td>
-                    <td>Aide a domicile pour les personnes agees</td>
-                    
-                </tr>
-                <tr>
-                    <td><img src="assets/image/repas.PNG" width="100" class="user-img "></td>
-                    <td>À la prise des médicaments</td>
-                    <td>Aide a domicile pour les personnes agees</td>
-                
-                </tr>
-                <tr>
-                   
-                    <td><img src="assets/image/peintureunmur.jpeg" width="100" class="user-img "></td>
-                    <td>Peinture des murs</td>
-                    <td>Brcolage-petits travaux</td>
-                   
-                </tr>
-                <tr>
-                    <td><img src="assets/image/installerunesuspension.jpg" width="100" class="user-img "></td>
-                    <td>Électricité</td>
-                    <td>Brcolage-petits travaux</td>
-                 
-                </tr>
-                <tr>
-                    <td><img src="assets/image/czrton.PNG" width="100" class="user-img "></td>
-                    <td>Déménagement</td>
-                    <td>Brcolage-petits travaux</td>
-                   
-                </tr>
-               
-               
-               
             </tbody>
         </table>
     </div>
@@ -114,39 +62,37 @@
   
                     <div class="rounded2">
                         <br>
-    <form class="form-horizontal">
+    <form class="form-horizontal" [formGroup]="serviceForm">
         <div class="form-group">
-      <label for="selection">Catégorie </label> 
-      <select id="selection" class="form-control" formControlServices="Services" >
+      <label for="selection">Catégorie</label> 
+      <select id="selection" class="form-control" formControlName="category">
         
-        <option value="">Confiage d'enfants</option>
-        <option value="">Aide a domicile pour les personnes agees</option>
-        <option value="">Brcolage-petits travaux</option>
+        <option value="Confiage d'enfants">Confiage d'enfants</option>
+        <option value="Aide a domicile pour les personnes agees">Aide a domicile pour les personnes agees</option>
+        <option value="Brcolage-petits travaux">Brcolage-petits travaux</option>
         </select>
        
         </div>
     
       
-    </form>
+
     <br>
 
       <!--p-->
-  
-        <form class="form-horizontal">
           
           <div class="form-group">
               
             <label>Service</label>
-            <input type="text" class="form-control" placeholder="Service"  >
+            <input type="text" class="form-control" placeholder="Service" formControlName="name"  >
      </div> <br>
      <div class="form-group">
               
         <label>Photo</label>
-         <input type="file" class="form-control"  >
+         <input type="file" class="form-control" #image (change)="onImagePicked(image)" >
  </div>
 
  <br><br><br>
- <button  class="btn signup"  >
+ <button  class="btn signup" (click)="addService()">
          
     Ajouter</button>
     </form>

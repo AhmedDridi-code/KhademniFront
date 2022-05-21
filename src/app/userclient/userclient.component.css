@@ -10,7 +10,12 @@
         margin-left: 350px;
     }
 
-
+    .form-invalid{
+        border-color: #ED4337  !important;
+        }
+    .form-valid{
+        border-color:#23DC3D !important;
+        }
     
 
     .form-container1{

@@ -22,7 +22,7 @@ export class AnnonceComponent implements OnInit {
   jobOffer = new FormGroup({
     service: new FormControl('',[Validators.required]),
     ville: new FormControl('',[Validators.required]),
-    addresse: new FormControl('',[Validators.required]),
+    address: new FormControl('',[Validators.required]),
     date: new FormControl('',[Validators.required]),
     prix: new FormControl('',[Validators.required]),
     description: new FormControl('',[Validators.required]),
@@ -42,11 +42,14 @@ export class AnnonceComponent implements OnInit {
   addJob() {
    // console.log(this.newJob);
    if(this.jobOffer.valid){
-     let user = this.authService.user;
-     let job =  {nom:"Wiem Ben Ali" , date : this.jobOffer.value.date, description:this.jobOffer.value.description, services : this.jobOffer.value.service , adresse : this.jobOffer.value.adresse, ville : this.jobOffer.value.ville , prix : this.jobOffer.value.prix , telephone:"25546987" }
-    this.jobService.ajouterJob(job);
-   this.message = "Votre annonce posté " ;
-    this.router.navigate(["/job"]);
+     let job =  {date : this.jobOffer.value.date, description:this.jobOffer.value.description, service : this.jobOffer.value.service , address : this.jobOffer.value.address, ville : this.jobOffer.value.ville , prix : this.jobOffer.value.prix}
+    this.jobService.ajouterJob(job).subscribe((result) =>{
+      this.message = "Votre annonce posté " ;
+      console.log(result);
+      //this.router.navigate(["/job"]);
+    })
+
+    
    }else{
     this.invalid=true;
    }

@@ -1,0 +1,12 @@
+.error {
+    font-size : 1.5rem;
+    color: #ed4337;
+    font-family: 'lobster', Cursive ;
+    line-height: 1;  
+  }
+.success{
+    font-size : 1.5rem;
+    color: #3e779e;
+    font-family: 'lobster', Cursive ;
+    line-height: 1;   
+}

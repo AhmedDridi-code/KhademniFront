@@ -16,24 +16,24 @@
   
         <div class="col-md-5">
            
-          <form>
+          <form [formGroup]="contactForm">
             <div class="form-group">
                Votre nom:
-              <input type="text" class="form-control" name="" value="" placeholder="Nom"><br>
+              <input type="text" class="form-control" name="" value="" placeholder="Nom" formControlName="name" [ngClass]="{'form-invalid':contactForm.controls['name'].touched && contactForm.controls['name'].errors?.['required'] || invalid,'form-valid':contactForm.controls['name'].touched && !contactForm.controls['name'].errors?.['required']}"><br>
             </div>
             <div class="form-group">
                Votre Email:
-              <input type="email" class="form-control" name="" value="" placeholder="E-mail"><br>
+              <input type="email" class="form-control" name="" value="" placeholder="E-mail" formControlName="email" [ngClass]="{'form-invalid':contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['required'] || invalid,'form-valid':contactForm.controls['email'].touched && !contactForm.controls['email'].errors?.['required']}"><br>
             </div>
             <div class="form-group">
              Votre telephone:
-              <input type="tel" class="form-control" name="" value="" placeholder="Telephone"><br>
+              <input type="tel" class="form-control" name="" value="" placeholder="Telephone" formControlName="phone" [ngClass]="{'form-invalid':contactForm.controls['phone'].touched && contactForm.controls['phone'].errors?.['required'] || invalid,'form-valid':contactForm.controls['phone'].touched && !contactForm.controls['phone'].errors?.['required']}"><br>
             </div>
             <div class="form-group">
            Votre message:
-              <textarea class="form-control" name="" rows="3" placeholder="Message"></textarea>
+              <textarea class="form-control" name="" rows="3" placeholder="Message" formControlName="message" [ngClass]="{'form-invalid':contactForm.controls['message'].touched && contactForm.controls['message'].errors?.['required'] || invalid,'form-valid':contactForm.controls['message'].touched && !contactForm.controls['message'].errors?.['required']}"></textarea>
             </div>
-            <button class="btn btn" type="submit" name="button">
+            <button class="btn btn" type="submit" name="button" (click)="submit()">
                 <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer
             </button>
           </form>

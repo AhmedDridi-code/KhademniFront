@@ -1,65 +1,55 @@
-
-        <!--Mon identité-->
-        <div class="form-bg">
-            <div class="container ">
-                <div class="form-container1">
-                    <h4 class="title">Mon identité</h4></div>
-                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                        <input type="file">
-                        </div>
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-2"></div>
-        
-        
-                    <div class="col-md-offset-3 col-md-1"></div>
-                    
-                    <div class="col-md-offset-3 col-md-6">
-                     
-                     
-                        <div class="form-container">
-                          
-                            <form class="form-horizontal">
-                            
-                                <div class="form-group">
-                                    <label>Nom</label>
-                                    <input type="text" class="form-control" placeholder="Nom">
-                                </div>
-                                <div class="form-group">
-                                    <label>Prenom</label>
-                                    <input type="text" class="form-control" placeholder="Prenom">
-                                </div>
-                                <div class="form-group">
-                                    <label>Id</label>
-                                    <input type="text" class="form-control" placeholder="Id">
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Mot de passe</label>
-                                    <input type="password" class="form-control" placeholder="Mot de passe">
-                                </div>
-                                <div class="form-group">
-                                    <label>Confirmez Mot de passe</label>
-                                    <input type="password" class="form-control" placeholder="Confirmez Mot de passe">
-                                </div>
-                                <div class="form-group">
-                                    <label>Telephone</label>
-                                    <input type="text" class="form-control" placeholder="Telephone">
-                                </div>
-                                <div class="form-group">
-                                    <label>Adresse</label>
-                                    <input type="adresse" class="form-control" placeholder="Adresse">
-                                </div>
-                                
-                          
-                                
-                                
-                                <button class="btn signup">Mettre à jour mon identité</button>
-                 </form></div>
-            </div><br><br>
+<!--Mon identité-->
+<div class="form-bg">
+    <div class="container ">
+        <div class="form-container1">
+            <h4 class="title">Mon identité</h4>
         </div>
-              
-        <!--close-Mon identité-->
-        
+        <img src="{{imagePreview || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}"
+            class="avatar img-circle img-thumbnail" alt="avatar" >
+        <input type="file" #image (change)="onImagePicked(image)" >
+    </div>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-2"></div>
+
+
+        <div class="col-md-offset-3 col-md-1"></div>
+
+        <div class="col-md-offset-3 col-md-6">
+
+
+            <div class="form-container">
+
+                <form class="form-horizontal" [formGroup]="userForm">
+
+                    <div class="form-group">
+                        <label>Nom</label>
+                        <input type="text" class="form-control" placeholder="Nom" formControlName="firstName" [ngClass]="{'form-invalid':userForm.controls['firstName'].touched && userForm.controls['firstName'].errors?.['required'],'form-valid':userForm.controls['firstName'].touched && !userForm.controls['firstName'].errors?.['required']}">
+                    </div>
+                    <div class="form-group">
+                        <label>Prenom</label>
+                        <input type="text" class="form-control" placeholder="Prenom" formControlName="lastName" [ngClass]="{'form-invalid':userForm.controls['lastName'].touched && userForm.controls['lastName'].errors?.['required'],'form-valid':userForm.controls['lastName'].touched && !userForm.controls['lastName'].errors?.['required']}">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email" formControlName="username" [ngClass]="{'form-invalid':userForm.controls['username'].touched && userForm.controls['username'].errors?.['required'],'form-valid':userForm.controls['username'].touched && !userForm.controls['username'].errors?.['required']}">
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <input type="password" class="form-control" placeholder="Mot de passe"
+                            formControlName="password" [ngClass]="{'form-invalid':userForm.controls['password'].touched && userForm.controls['password'].errors?.['required'],'form-valid':userForm.controls['password'].touched && !userForm.controls['password'].errors?.['required']}">
+                    </div>
+                    <div class="form-group">
+                        <label>Telephone</label>
+                        <input type="text" class="form-control" placeholder="Telephone" formControlName="phone" [ngClass]="{'form-invalid':userForm.controls['phone'].touched && userForm.controls['phone'].errors?.['required'],'form-valid':userForm.controls['phone'].touched && !userForm.controls['phone'].errors?.['required']}">
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse</label>
+                        <input type="adresse" class="form-control" placeholder="Adresse" formControlName="address" [ngClass]="{'form-invalid':userForm.controls['address'].touched && userForm.controls['address'].errors?.['required'],'form-valid':userForm.controls['address'].touched && !userForm.controls['address'].errors?.['required']}">
+                    </div>
+                    <button class="btn signup" (click)="submit()">Mettre à jour mon identité</button>
+                </form>
+            </div>
+        </div><br><br>
+    </div>
+
+    <!--close-Mon identité-->

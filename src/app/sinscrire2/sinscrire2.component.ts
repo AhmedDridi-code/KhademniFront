@@ -30,8 +30,7 @@ export class Sinscrire2Component implements OnInit {
     inscrit(){
       if(this.sinscrireForm.valid){
         //let user = new User(this.sinscrireForm.value.email, this.sinscrireForm.value.mdp, ["USER1"]);
-        this.authService.users.push({"email":this.sinscrireForm.value.email as string, "password":this.sinscrireForm.value.password as string, "roles":["USER2"]});
-        this.router.navigate(["/connection"]);
+        this.authService.register(this.sinscrireForm.value,"JOBBER");
     }else{
       this.invalid=true;
     }

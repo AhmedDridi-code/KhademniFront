@@ -43,14 +43,40 @@
                       <div class="form-group">
                           
                         <label>Ville</label>
-                        <input type="text" class="form-control" placeholder="Ville" formControlName="ville" [ngClass]="{'form-invalid':jobOffer.controls['ville'].touched && jobOffer.controls['ville'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['ville'].touched && !jobOffer.controls['ville'].errors?.['required']}">
-                        
+                        <select class="form-control" id="inputGroupSelect04" aria-label="Example select with button addon" formControlName="ville" [ngClass]="{'form-invalid':jobOffer.controls['ville'].touched && jobOffer.controls['ville'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['ville'].touched && !jobOffer.controls['ville'].errors?.['required']}">
+                          <option selected value="">Toute la Tunisie</option>
+                          <option value="Ariana">Ariana</option>
+                          <option value="Béja">Béja</option>
+                          <option value="Ben Arous">Ben Arous</option>
+                          <option value="Bizerte">Bizerte</option>
+                          <option value="Gabès">Gabès</option>
+                          <option value="Gafsa">Gafsa</option>
+                          <option value="Jendouba">Jendouba</option>
+                          <option value="Kairouan">Kairouan</option>
+                          <option value="Kasserine">Kasserine</option>
+                          <option value="Kébili">Kébili</option>
+                          <option value="Le Kef">Le Kef</option>
+                          <option value="Mahdia">Mahdia</option>
+                          <option value="La Manouba">La Manouba</option>
+                          <option value="Médenine">Médenine</option>
+                          <option value="Monastir">Monastir</option>
+                          <option value="Nabeul">Nabeul</option>
+                          <option value="Sfax">Sfax</option>
+                          <option value="Sidi Bouzid">Sidi Bouzid</option>
+                          <option value="Siliana">Siliana</option>
+                          <option value="Sousse">Sousse</option>
+                          <option value="Tataouine">Tataouine</option>
+                          <option value="Touzeur">Touzeur </option>
+                          <option value="Tunis">Tunis</option>
+                          <option value="Zaghouan">Zaghouan</option>
+                        </select>
+              
                       </div><br>
                       
                       <div class="form-group">
                           
                             <label>Adresse </label>
-                            <input type="text" class="form-control" placeholder="Adresse" formControlName="addresse" [ngClass]="{'form-invalid':jobOffer.controls['addresse'].touched && jobOffer.controls['addresse'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['addresse'].touched && !jobOffer.controls['addresse'].errors?.['required']}">
+                            <input type="text" class="form-control" placeholder="Adresse" formControlName="address" [ngClass]="{'form-invalid':jobOffer.controls['address'].touched && jobOffer.controls['address'].errors?.['required'] || invalid,'form-valid':jobOffer.controls['address'].touched && !jobOffer.controls['address'].errors?.['required']}">
                             
                             
                           </div><br>

@@ -22,12 +22,16 @@ export class ConnexionComponent implements OnInit {
 
   });
 
+  
   constructor( private authenticationService : AuthenticationService , 
     public router: Router) { }
 
 
 
   ngOnInit(): void {
+    this.authenticationService.getError().subscribe((result)=>{
+      this.erreur=result;
+    })
   }
 
   onLoggedin()
@@ -36,15 +40,7 @@ export class ConnexionComponent implements OnInit {
     if(this.connexion.valid) {
       console.log("email: "+this.connexion.value.email );
       console.log("password: "+this.connexion.value.mdp );
-      let isValidUser: Boolean = this.authenticationService.SignIn(this.connexion.value.email as string, this.connexion.value.mdp as string);
-      console.log("valid user "+isValidUser);
-      if (isValidUser)
-      
-        this.router.navigate(['/accueil']);     
-      
-        else
-          //alert('Login ou mot de passe incorrecte!');
-     this.erreur =1;
+      this.authenticationService.SignIn(this.connexion.value.email, this.connexion.value.mdp)
     }else{
       this.invalid=true;
     }

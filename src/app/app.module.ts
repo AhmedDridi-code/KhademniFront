@@ -48,7 +48,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StarComponent } from './star/star.component';
 import { ProfileJobberComponent } from './profile-jobber/profile-jobber.component';
-
+import { AuthInterceptor } from './auth.interceptor';
+import { FilterPipe } from './pipes/filter.pipe';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
 
 
 
@@ -98,6 +101,8 @@ import { ProfileJobberComponent } from './profile-jobber/profile-jobber.componen
            PostulationsComponent,
            StarComponent,
            ProfileJobberComponent,
+           FilterPipe,
+           PopupComponent,
 
         
      
@@ -113,10 +118,11 @@ import { ProfileJobberComponent } from './profile-jobber/profile-jobber.componen
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTooltipModule,
-    NgbModule
+    NgbModule,
+    MatDialogModule
 
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

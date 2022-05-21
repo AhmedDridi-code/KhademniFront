@@ -1,10 +1,69 @@
-
-
-
-<div class="container mt-5">  <br><br> <br>
-
-    <h4>Mes annonces en cours</h4> <br> <br>
-    <p>Vous n'avez encore de annonce attribué.</p> <br>
-    <button class="btn1" (click)="annonce()"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>  Poster une annonce</button>
+<div class="container mt-5">
+    <div *ngIf="annonces.length < 1"  class="container mt-5">
+        <h4>Mes annonces en cours</h4>
+        <p  class="container mt-2">Vous n'avez encore de annonce attribué.</p> <br>
+        <button class="btn1" (click)="annonce()"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Poster une
+            annonce</button>
     </div>
-    <br><br><br><br><br>
+
+
+    <div class="container mt-3" *ngIf="annonces.length > 0">
+
+        <div class=" card height-100 row d-flex justify-content-center align-items-center"
+            *ngFor="let annonce of annonces">
+            <div class="col-md-14">
+                <div class="p-3  rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <img src="{{annonce.user.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="rounded-circle">
+                            <div class="col-md-9">
+                                <div class="ml-2">
+                                    <div class="main"> <i class="fa fa-calendar" aria-hidden="true"> {{annonce.date |
+                                            date : 'dd/MM/yyyy'}}</i>
+                                           
+                                        <h5>{{annonce.user.firstName}} {{annonce.user.lastName}}</h5>
+                                       
+                                        
+                                    </div> <br>
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h6>{{annonce.description}} </h6>
+                                            
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div style="text-align: right;font-size:25px"><i class="fa-solid fa-circle-xmark" (click)="delete(annonce.id)"></i></div>
+                                        </div>
+                                    </div>
+ 
+                                    
+
+
+                                </div>
+                                <br>
+                               
+                                <div class="d-flex flex-row"> <span class="mt-5">
+
+                                        <a class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>
+                                                {{annonce.address}},{{annonce.ville}}</strong></a>
+
+                                        <a class="btn"><i class="fa fa-tag" aria-hidden="true"> </i> <strong>
+                                                {{annonce.service}}</strong></a>
+                                        <a class="btn"> <i class="fa fa-money" aria-hidden="true"></i><strong>
+                                                {{annonce.prix}}</strong></a>
+
+                                    </span>
+                                    
+                                </div>
+                                
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br><br><br><br><br>

@@ -58,90 +58,16 @@
                     </thead>
                     <tbody>
                        
-                        <tr>
-                           <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majdi</td>
-                            <td>majdi1@gmail.com </td>
-                            <td>51111222</td>
-                            <td>Jobbeur</td>
+                        <tr *ngFor="let jobber of jobbers">
+                           <td> <img  src="{{jobber?.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
+                            <td>{{jobber?.firstName}}</td>
+                            <td>{{jobber?.username}}</td>
+                            <td>{{jobber?.phone}}</td>
+                            <td>{{jobber?.role}}</td>
                             <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
+                            <td> <button  class="btn" (click)="deleteJobber(jobber.id)"> Suspendre </button></td>
                         </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jouri</td>
-                            <td>jouri1@gmail.com </td>
-                            <td>51222222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Jad</td>
-                            <td>jad1@gmail.com </td>
-                            <td>51333222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Iyed</td>
-                            <td>iyed1@gmail.com </td>
-                            <td>51444222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyna</td>
-                            <td>lyna1@gmail.com </td>
-                            <td>51555222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Aymen</td>
-                            <td>aymen1@gmail.com </td>
-                            <td>51666222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Ayla</td>
-                            <td>ayla1@gmail.com </td>
-                            <td>51777222</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Majd</td>
-                            <td>majd1@gmail.com </td>
-                            <td>51222888</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                        <tr>
-                            <td> <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"></td> 
-                            <td>Lyne</td>
-                            <td>lyne1@gmail.com </td>
-                            <td>51222999</td>
-                            <td>Jobbeur</td>
-                            <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
-                            <td> <button  class="btn"> Suspendre </button></td>
-                        </tr>
-                       
-                       
-                       
+
                     </tbody>
                 </table>
             </div>

@@ -24,6 +24,5 @@ dashservices(){
 }
 logout() {
   this.authenticationService.logout();
- 
 }
 }
