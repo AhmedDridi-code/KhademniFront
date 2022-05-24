@@ -41,10 +41,11 @@ logout() {
         this.token=result.token;
         console.log(this.role);
         this.isloggedIn=true;
-        this.router.navigate(['/accueil'])
         setTimeout(()=>{
           this.logout();
-        },7200000)
+        },3600000)
+        this.router.navigate(['/accueil'])
+
       }
 
       },(err) => {
@@ -107,13 +108,14 @@ logout() {
     const authData = this.getAuthData();
     if(!authData){
       return;
+
     }
       this.token=authData.token;
       this.isloggedIn=true;
       this.loggedUser =authData.user? JSON.parse(authData.user):null;
-      console.log(this.role);
-      console.log(typeof this.loggedUser);
-      console.log(this.loggedUser)
+      setTimeout(()=>{
+        this.logout();
+        },1800000)
        
   }
 

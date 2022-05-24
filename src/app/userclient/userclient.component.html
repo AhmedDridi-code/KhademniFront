@@ -34,11 +34,6 @@
                         <input type="email" class="form-control" placeholder="Email" formControlName="username" [ngClass]="{'form-invalid':userForm.controls['username'].touched && userForm.controls['username'].errors?.['required'],'form-valid':userForm.controls['username'].touched && !userForm.controls['username'].errors?.['required']}">
                     </div>
                     <div class="form-group">
-                        <label>Mot de passe</label>
-                        <input type="password" class="form-control" placeholder="Mot de passe"
-                            formControlName="password" [ngClass]="{'form-invalid':userForm.controls['password'].touched && userForm.controls['password'].errors?.['required'],'form-valid':userForm.controls['password'].touched && !userForm.controls['password'].errors?.['required']}">
-                    </div>
-                    <div class="form-group">
                         <label>Telephone</label>
                         <input type="text" class="form-control" placeholder="Telephone" formControlName="phone" [ngClass]="{'form-invalid':userForm.controls['phone'].touched && userForm.controls['phone'].errors?.['required'],'form-valid':userForm.controls['phone'].touched && !userForm.controls['phone'].errors?.['required']}">
                     </div>

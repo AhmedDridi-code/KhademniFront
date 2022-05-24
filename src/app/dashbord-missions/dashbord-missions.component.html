@@ -1,0 +1,25 @@
+<h3 class="fs-4 mb-3">Postulations</h3>
+<table class="table  rounded1 shadow-sm  table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">Offre</th>
+            <th scope="col">Status</th>
+       
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+        <tr *ngFor="let postulation of postulations">
+            <td><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" width="100" class="user-img "></td>
+            <td>{{postulation.user.firstName}}</td>
+            <td>{{postulation.user.lastName}}</td>
+            <td>{{postulation.offre.description}}</td>
+            <td>{{postulation.status}}</td>
+            <td><button class="button" (click)="finish(postulation.id)"><i class="fa-solid fa-check icon"></i></button></td> 
+        </tr>
+    </tbody>
+</table>

@@ -8,14 +8,31 @@ import { AuthenticationService } from '../service/authentication.service';
   styleUrls: ['./profilclient.component.css']
 })
 export class ProfilclientComponent implements OnInit {
-  constructor(private router : Router,private authService: AuthenticationService) { }
+  constructor(private router: Router, public authService: AuthenticationService) { }
   user = this.authService.loggedUser
   ngOnInit(): void {
+    
   }
-  userclient(){
-    this.router.navigate(["/userclient"])}
-    missionsclient(){
-      this.router.navigate(["/missionsclient"])}
-statistiqueclient(){
-        this.router.navigate(["/statistiqueclient"])}
+  userclient() {
+    this.router.navigate(["/userclient"])
+  }
+  missionsclient() {
+    this.router.navigate(["/missionsclient"])
+  }
+  statistiqueclient() {
+    this.router.navigate(["/statistiqueclient"])
+  }
+
+  userjobbeur() {
+    this.router.navigate(["/userclient"])
+  }
+  missions() {
+    this.router.navigate(["/missions"])
+  }
+  statistique() {
+    this.router.navigate(["/statistique"])
+  }
+  notes() {
+    this.router.navigate(["/notes"])
+  }
 }

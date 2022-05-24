@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashbordJobberComponent } from './dashbord-jobber/dashbord-jobber.component';
+import { DashbordMissionsComponent } from './dashbord-missions/dashbord-missions.component';
 import { DashclientsComponent } from './dashclients/dashclients.component';
 import { DashcontactComponent } from './dashcontact/dashcontact.component';
 import { DashjobbeursComponent } from './dashjobbeurs/dashjobbeurs.component';
@@ -50,6 +51,9 @@ const routes: Routes = [
   {path : "packs" , component : PacksComponent},
   {path : "dashbordJobber" , component : DashbordJobberComponent, children:[ {
     path : "postulations", component :PostulationsComponent
+  },
+  {
+    path : "missions", component :DashbordMissionsComponent
   } ]},
   {path : "payement" , component : PayementComponent},
   {path : "contact" , component : ContactComponent},
@@ -76,6 +80,7 @@ const routes: Routes = [
   {path : "profilclient" , component : ProfilclientComponent},
   {path : "recover" , component : RecoverComponent},
   {path : "profilejobbeur/:id" , component : ProfileJobberComponent},
+  { path: '**', redirectTo: 'accueil'}
 
 
   

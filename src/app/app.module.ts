@@ -52,6 +52,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { FilterPipe } from './pipes/filter.pipe';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopupComponent } from './popup/popup.component';
+import { DashbordMissionsComponent } from './dashbord-missions/dashbord-missions.component';
 
 
 
@@ -103,6 +104,7 @@ import { PopupComponent } from './popup/popup.component';
            ProfileJobberComponent,
            FilterPipe,
            PopupComponent,
+           DashbordMissionsComponent,
 
         
      

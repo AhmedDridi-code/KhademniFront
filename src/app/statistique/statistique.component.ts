@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostulationService } from '../services/postulation.service';
 
 @Component({
   selector: 'app-statistique',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatistiqueComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public postulationService:PostulationService) { }
+  postulations:number=0;
   ngOnInit(): void {
+    this.postulationService.getPostulationsFinished().subscribe((result:any)=>{
+      this.postulations= result.length;
+    })
   }
 
 }

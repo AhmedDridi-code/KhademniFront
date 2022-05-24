@@ -1,13 +1,15 @@
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
     <div class="main1" id="sidebar-wrapper">
-        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold  border-bottom" (click)="dashboard()">
+        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold  border-bottom" routerLink="/dashbordJobber/postulations">
             <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
         </div> <br>
 
         <div class="list-group list-group-flush my-3">
-            <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="dashboard()">
+            <a class="list-group-item list-group-item-action  second-text fw-bold" routerLink="/dashbordJobber/postulations">
                 <i class="fa fa-pie-chart" aria-hidden="true"></i> Postulations </a> <br><br>
+                <a class="list-group-item list-group-item-action  second-text fw-bold" routerLink="/dashbordJobber/missions">
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i> Missions </a> <br><br>
             <a class="list-group-item list-group-item-action  second-text fw-bold" (click)="logout()">
                 <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</a>
         </div>
@@ -35,7 +37,7 @@
                 <div class="col-md-3 ">
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
-                            <h3 class="fs-2">720</h3>
+                            <h3 class="fs-2">{{postulations}}</h3>
                             <p class="fs-5">Postulations</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>
@@ -45,7 +47,7 @@
                 <div class="col-md-3">
                     <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div class="main4">
-                            <h3 class="fs-2">1200</h3>
+                            <h3 class="fs-2">{{jobs}}</h3>
                             <p class="fs-5">Offre</p>
                         </div>
                         <i class="fa fa-users" aria-hidden="true"></i>

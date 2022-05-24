@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
+import { JobService } from '../service/job.service';
+import { PostulationService } from '../services/postulation.service';
 
 @Component({
   selector: 'app-dashbord-jobber',
@@ -9,10 +11,16 @@ import { AuthenticationService } from '../service/authentication.service';
 })
 export class DashbordJobberComponent implements OnInit {
   constructor(private router :Router, 
-    public authenticationService: AuthenticationService) { }
-
-
+    public auth: AuthenticationService,private postulationsService: PostulationService,private jobService: JobService) { }
+postulations:number = 0;
+jobs:number = 0;
   ngOnInit(): void {
+    this.postulationsService.getPostulationByOffreUser(this.auth.loggedUser.id).subscribe((postulations:any) =>{
+      this.postulations = postulations.length;
+    })
+    this.jobService.listeMyJobs().subscribe((jobs:any)=>{
+      this.jobs=jobs.length;
+    })
   }
 
   dashboard(){
@@ -23,6 +31,6 @@ dashservices(){
   this.router.navigate(["/dashservices"])
 }
 logout() {
-  this.authenticationService.logout();
+  this.auth.logout();
 }
 }

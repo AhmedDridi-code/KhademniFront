@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JobService } from '../service/job.service';
+import { PostulationService } from '../services/postulation.service';
 
 @Component({
   selector: 'app-missions',
@@ -8,10 +10,17 @@ import { Router } from '@angular/router';
 })
 export class MissionsComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  postulations:any[]=[]
+  constructor(private router : Router, public postulationService : PostulationService) { }
 
   ngOnInit(): void {
+    this.postulationService.getPostulationByJobberId().subscribe((result:any)=>{
+      this.postulations= result;
+      console.log(result);
+    })
   }
+
   job(){
-    this.router.navigate(["/job"])}
+    this.router.navigate(["/job"])
+  }
 }

@@ -10,25 +10,29 @@ export class ProfiljobbeurComponent implements OnInit {
 
 
 
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
   }
 
-  
-  userjobbeur(){
-    this.router.navigate(["/userjobbeur"])}
-    missions(){
-      this.router.navigate(["/missions"])}
-statistique(){
-        this.router.navigate(["/statistique"])}
-notes(){
-          this.router.navigate(["/notes"])}
+
+  userjobbeur() {
+    this.router.navigate(["/userjobbeur"])
+  }
+  missions() {
+    this.router.navigate(["/missions"])
+  }
+  statistique() {
+    this.router.navigate(["/statistique"])
+  }
+  notes() {
+    this.router.navigate(["/notes"])
+  }
 
 
 
-          //ratings
+  //ratings
 
 
 }

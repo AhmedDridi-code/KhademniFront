@@ -15,6 +15,7 @@ export class PostulationsComponent implements OnInit {
   ngOnInit(): void {
     this.postulationService.getPostulationByOffreUser(this.auth.loggedUser.id).subscribe((result:any)=>{
       this.postulations = result;
+      console.log(result);
     })
   }
 

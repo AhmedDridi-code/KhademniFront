@@ -1,45 +1,63 @@
-
 <!--profil-->
 <div class="main">
     <br><br><br>
     <div class="profil-head">
-   
-            <div class="row ">
-             <div class="col-md-2"></div>
-                <div class="col-md-2">
 
-    <img src="{{user.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}" class="avatar img-circle img-thumbnail" alt="avatar">  <br> <br>
+        <div class="row ">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
 
-  
+                <img src="{{user.image || 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'}}"
+                    class="avatar img-circle img-thumbnail" alt="avatar"> <br> <br>
+
+
+            </div>
+
+            <div class="col-md-6"> <br>
+
+                <h5><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Bonjour, {{user.firstName}} {{user.lastName}}
+                    <button class="btn1" (click)="userclient()"> <i class="fa fa-pencil-square-o"
+                            aria-hidden="true"></i>Editer</button>
+                </h5>
+
+                <p>Bienvenue dans votre espace personnel 5ademni.tn .</p>
+
+
+            </div>
+
+        </div>
     </div>
-       
-<div class="col-md-6"> <br>
-    
-    <h5><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Bonjour, {{user.firstName}} {{user.lastName}}
-         <button class="btn1" (click)="userclient()"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Editer</button> 
-         </h5>
 
-    <p>Bienvenue dans votre espace personnel 5ademni.tn .</p>
 
-    
-    </div>
-    
-      </div>
 </div>
 
-
-</div>
- 
 
 <br> <br><br> <br>
 
-<div class="profile-header">
+<div class="profile-header" *ngIf="authService.isClient()">
     <div class="text-center">
-        <button type="button" class="btn" (click)="userclient()"><i class="fa fa-user" aria-hidden="true" > </i>Mon identité</button>
-        <button type="button" class="btn" (click)="missionsclient()"><i class="fa fa-plus-circle" aria-hidden="true" > </i>Mes missions</button>
-        <button type="button" class="btn" (click)="statistiqueclient()"><i class="fa fa-eye" aria-hidden="true" > </i>Mes statistique</button>
-       
-     </div></div>
+        <button type="button" class="btn" (click)="userclient()"><i class="fa fa-user" aria-hidden="true"> </i>Mon
+            identité</button>
+        <button type="button" class="btn" (click)="missionsclient()"><i class="fa fa-plus-circle" aria-hidden="true">
+            </i>Mes missions</button>
+        <button type="button" class="btn" (click)="statistiqueclient()"><i class="fa fa-eye" aria-hidden="true"> </i>Mes
+            statistique</button>
+
+    </div>
+</div>
+
+<div class="profile-header" *ngIf="authService.isJobber()">
+    <div class="text-center">
+        <button type="button" class="btn" (click)="userjobbeur()"><i class="fa fa-user" aria-hidden="true"> </i>Mon
+            identité</button>
+        <button type="button" class="btn" (click)="missions()"><i class="fa fa-plus-circle" aria-hidden="true"> </i>Mes
+            missions</button>
+        <button type="button" class="btn" (click)="statistique()"><i class="fa fa-eye" aria-hidden="true"> </i>Mes
+            statistique</button>
+        <button type="button" class="btn" (click)="notes()"><i class="fa fa-star-half-o" aria-hidden="true"> </i>Mes
+            Notes</button>
+    </div>
+</div>
 
 
 
@@ -47,4 +65,4 @@
 <!--close-jobbeurheader-->
 
 
-   <br> <br><br><br> 
+<br> <br><br><br>

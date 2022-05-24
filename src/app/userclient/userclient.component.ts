@@ -20,7 +20,6 @@ export class UserclientComponent implements OnInit {
       firstName:new FormControl(this.user["firstName"],[Validators.required]),
       lastName:new FormControl(this.user["lastName"],[Validators.required]),
       username: new FormControl(this.user["username"],[Validators.required]),
-      password: new FormControl('',[Validators.required]),
       address: new FormControl(this.user["address"],[Validators.required]), 
       phone: new FormControl(this.user["phone"],[Validators.required]),
       image:new FormControl(''),
